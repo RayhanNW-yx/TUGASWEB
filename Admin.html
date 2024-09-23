@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Hotel Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .admin-container {
+            display: flex;
+        }
+        .sidebar {
+            background-color: #2d2d2d;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn.edit {
+            background-color: #2196F3;
+        }
+        .btn.delete {
+            background-color: #f44336;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Admin Panel - Hotel Management</h1>
+    </div>
+
+    <div class="admin-container">
+        <div class="sidebar">
+            <a href="Room.html">Rooms</a>
+            <a href="Facilities.html">Facilities</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Restaurant.html">Restaurant</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        
+        <div class="content" id="rooms">
+            <h2>Rooms Management</h2>
+            <table>
+                <tr>
+                    <th>Room Type</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>Deluxe Room</td>
+                    <td>IDR 850.000</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grand Deluxe Room</td>
+                    <td>IDR 2.000.000</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content" id="facilities">
+            <h2>Facilities Management</h2>
+            <table>
+                <tr>
+                    <th>Facility</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>Swimming Pool</td>
+                    <td>Outdoor pool available 24/7</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spa</td>
+                    <td>Luxury spa for relaxation</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content" id="gallery">
+            <h2>Gallery Management</h2>
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td><img src="DELUXE.jpg" alt="Room 1" width="100"></td>
+                    <td>Deluxe Room Image</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="pool.jpeg" alt="Pool" width="100"></td>
+                    <td>Swimming Pool Image</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content" id="restaurant">
+            <h2>Restaurant Management</h2>
+            <table>
+                <tr>
+                    <th>Menu Item</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>Grilled Salmon</td>
+                    <td>IDR 150.000</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beef Steak</td>
+                    <td>IDR 200.000</td>
+                    <td>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Function to delete a row in the table
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+
+</body>
+</html>

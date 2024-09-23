@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .services-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .services-section h2 {
+            color: #b59a4b;
+            margin-bottom: 40px;
+        }
+        .service-boxes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-box img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .service-box h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .service-box p {
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .service-box {
+                width: 45%;
+            }
+        }
+        @media (max-width: 500px) {
+            .service-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="Home.html">Home</a>
+    <a href="Room.html">Rooms</a>
+    <a href="About.html">Promotion</a>
+    </div>
+
+    <div class="header">
+        <h1>Hotel Services</h1>
+    </div>
+
+    <div class="services-section">
+        <h2>Our Exclusive Services</h2>
+        <div class="service-boxes">
+            <div class="service-box">
+                <img src="Room service.jpg" alt="Room Service Icon">
+                <h3>Room Service</h3>
+                <p>Enjoy 24/7 room service with a variety of local and international dishes delivered straight to your room.</p>
+            </div>
+            <div class="service-box">
+                <img src="rooftop.jpeg" alt="Spa Icon">
+                <h3>Spa & Wellness</h3>
+                <p>Relax and rejuvenate with our premium spa treatments, including massages, facials, and more.</p>
+            </div>
+            <div class="service-box">
+                <img src="RESTAURANT.jpg" alt="Restaurant Icon">
+                <h3>Gourmet Restaurant</h3>
+                <p>Dine in style at our gourmet restaurant, offering a selection of international and local delicacies.</p>
+            </div>
+            <div class="service-box">
+                <img src="pool.jpeg" alt="Swimming Pool Icon">
+                <h3>Swimming Pool</h3>
+                <p>Take a dip in our rooftop pool with stunning views of the city and surrounding mountains.</p>
+            </div>
+            <div class="service-box">
+                <img src="fitness-centre.jpg" alt="Gym Icon">
+                <h3>Fitness Center</h3>
+                <p>Stay fit during your stay with access to our state-of-the-art gym equipped with modern machines.</p>
+            </div>
+            <div class="service-box">
+                <img src="wifi.png" alt="Free Wifi Icon">
+                <h3>Free High-Speed Wifi</h3>
+                <p>Stay connected with complimentary high-speed internet access available throughout the hotel.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

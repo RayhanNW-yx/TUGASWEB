@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayhan Hotel - Rooms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #111;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #444;
+            border-radius: 4px;
+        }
+
+        .breadcrumb {
+            margin: 10px 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .room-header {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .room-header img {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .room-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .room-card {
+            background-color: #fff;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .room-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .room-info {
+            padding: 15px;
+        }
+
+        .room-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .room-info p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .room-info .price {
+            font-size: 16px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .room-info .details-button {
+            background-color: #bfa641;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .room-info .details-button:hover {
+            background-color: #a89035;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer div {
+            max-width: 200px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .booking-bar {
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .booking-bar input[type="date"] {
+            padding: 5px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .booking-bar button {
+            padding: 8px 16px;
+            background-color: #bfa641;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .booking-bar button:hover {
+            background-color: #a89035;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Rayhan Hotel
+</div>
+
+<div class="navbar">
+    <a href="Home.html">Home</a>
+    <a href="Room.html">Rooms</a>
+    <a href="Promotion.html">Promotion</a>
+    <a href="Facilities.html">Facilities</a>
+    <a href="Restaurant.html">Restaurant</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="About.html">Contact Us</a>
+</div>
+
+<div class="room-header">
+    <h1>Rooms</h1>
+    <img src="Room.jpg" alt="Hotel Room">
+</div>
+
+<div class="booking-bar">
+    <input type="date" value="2024-08-30">
+    <input type="date" value="2024-08-31">
+    <button>Book a Room</button>
+</div>
+
+<div class="room-grid">
+    <div class="room-card">
+        <img src="DELUXE.jpg" alt="Deluxe Room">
+        <div class="room-info">
+            <h3>Deluxe Room IDR 850.000,-</h3>
+            <p>Menggabungkan kenyamanan dan kemewahan di setiap ruangan untuk memastikan...</p>
+            <a href="deluxe.html" class="details-button">View More Details</a>
+        </div>
+    </div>
+    <div class="room-card">
+        <img src="GRAND-DELUXE.jpg" alt="Grand Deluxe Room">
+        <div class="room-info">
+            <h3>Grand Deluxe Room IDR 2.000.000,-</h3>
+            <p>Bandung terkenal sebagai tempat yang menyenangkan untuk liburan keluarga dengan banyak...</p>
+            <a href="Grand Deluxe.html" class="details-button">View More Details</a>
+        </div>
+    </div>
+    <div class="room-card">
+        <img src="EXECUTIVE.jpg" alt="EXECUTIVE Room">
+        <div class="room-info">
+            <h3>Executive Room IDR 2.800.000,-</h3>
+            <p>Menawarkan akomodasi mewah dan nyaman di Bandung, Kamar Eksekutif kami seluas 36 meter persegi...</p>
+            <a href="executive.html" class="details-button">View More Details</a>
+        </div>
+    </div>
+        
+    <div class="room-card">
+        <img src="JUNIOR-SUITE.jpg" alt="Grand Deluxe Room">
+        <div class="room-info">
+            <h3>Junior Suite Room IDR 2.700.000,-</h3>
+            <p>Menawarkan tempat tidur king yang mewah dan nyaman, televisi pintar modern 42 inci dengan...</p>
+            <a href="junior-suite.html" class="details-button">View More Details</a>
+        </div>
+    </div>
+    
+    <div class="room-card">
+        <img src="suite.jpg" alt="Rayhan Suite Room">
+        <div class="room-info">
+            <h3>Rayhan Suite Room IDR 3.500.000,-</h3>
+            <p>Memberikan tamu kemewahan tertinggi, Rayhan Suite yang mewah seluas 52 meter persegi...</p>
+            <a href="rayhan-suite.html" class="details-button">View More Details</a>
+        </div>
+    </div>
+        
