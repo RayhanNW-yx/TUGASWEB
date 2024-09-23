@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayhan Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }==
+        }
+
+        /* Custom button hover effect */
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar Example</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@headlessui/react@1.4.2/dist/headlessui.min.js"></script>
+        <style>
+            /* Sticky navbar */
+            .navbar {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+            }
+
+            /* Transition for changing navbar background on scroll */
+            .navbar.scrolled {
+                background-color: rgba(31, 41, 55, 0.95);
+                /* Slightly transparent background */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Adds shadow for depth */
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            /* Add smooth scroll effect */
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="bg-transparent navbar">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="flex-1 flex items-center justify-between">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-auto" src="Rayhan.jpg" alt="Hotel Logo">
+                        </div>
+
+                        <!-- Desktop Menu -->
+                        <div class="hidden sm:block sm:ml-6">
+                            <div class="flex space-x-8 text-lg font-medium">
+                                <a href="Home.html"
+                                    class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                                <a href="Room.html"
+                                    class="text-gray-300 hover:text-white transition duration-300">Rooms</a>
+                                <a href="About.html" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                                <a href="About.html"
+                                    class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+                       <a href="Admin.html"
+                        class="text-gray-300 hover:text-white transition duration-300">Admin</a
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Button -->
+                        <div class="sm:hidden">
+                            <button type="button"
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                aria-controls="mobile-menu" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="Home.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                    <a href="Room.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Rooms</a>
+                    <a href="Services.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Services</a>
+                    <a href="About.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+                         <a href="Promotion.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Promotion</a>
+                        <a href="Facilities.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Facilities</a>
+                       <a href="Restaurant.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Restaurant</a>
+                        <a href="Gallery.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Galery</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Script for scrolling effect -->
+        <script>
+            // Adding background color to navbar on scroll
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        </script>
+
+    </body>
+
+
+
+
+    <!-- Hero Section -->
+    <header class="bg-cover bg-center fade-in"
+        style="background-image: url('rayhan-hotel.jpeg'); height: 80vh;">
+        <div class="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-white">Welcome To Rayhan Hotel</h1>
+                <p class="mt-4 text-xl text-gray-300">Luxury and comfort at the heart of the city</p>
+                <a href="#rooms"
+                    class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg btn-hover">Book
+                    Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">Our Features</h2>
+                <p class="mt-4 text-lg text-gray-500">Experience the best services during your stay</p>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="text-center">
+                    <img src="rooftop.jpeg" alt="Rooftop"
+                        class="w-full h-56 object-cover rounded-lg shadow-md">
+                    <h3 class="mt-4 text-xl font-bold">Spa & Wellness</h3>
+                    <p class="mt-2 text-gray-500">Relax and rejuvenate at our luxurious spa.</p>
+                </div>
+                <div class="text-center">
+                    <img src="Finedining.jpg" alt="Fine Dining" class="w-full h-56 object-cover rounded-lg shadow-md">
+                    <h3 class="mt-4 text-xl font-bold">Fine Dining</h3>
+                    <p class="mt-2 text-gray-500">Indulge in gourmet meals at our 5-star restaurant.</p>
+                </div>
+                <div class="text-center">
+                    <img src="pool.jpeg" alt="Swimming Pool" class="w-full h-56 object-cover rounded-lg shadow-md">
+                    <h3 class="mt-4 text-xl font-bold">Swimming Pool</h3>
+                    <p class="mt-2 text-gray-500">Take a dip in our crystal-clear pool with a stunning view.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">Our Rooms</h2>
+                <p class="mt-4 text-lg text-gray-500">Comfortable and stylish rooms for a perfect stay</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div
+                    class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="DELUXE.jpg" alt="Deluxe Room"
+                        class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Spacious Room</h3>
+                        <p class="mt-2 text-gray-500">Menggabungkan kenyamanan dan kemewahan di setiap ruangan untuk memastikan...</p>
+                        <button
+                            class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg btn-hover">Rp.850.000/night</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="suite.jpg" alt="Suite Room"
+                        class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Suite Room</h3>
+                        <p class="mt-2 text-gray-500">Memberikan tamu kemewahan tertinggi, Rayhan Suite seluas 52 meter persegi....</p>
+                        <button
+                            class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg btn-hover">Rp.3.500.000/night</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="JUNIOR-SUITE.jpg" alt="Junior Suite" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Family Room</h3>
+                        <p class="mt-2 text-gray-500">Menawarkan tempat tidur king yang mewah dan nyaman, televisi pintar modern 42 inci dengan...
+                        </p>
+                        <button
+                            class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg btn-hover">Rp.2.700.000/night</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include jQuery UI CSS for datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .availability-bar {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            justify-content: center;
+        }
+
+        .dropdown,
+        .date-picker {
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .date-picker {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Calendar_font_awesome.svg') no-repeat right 10px center;
+            background-size: 20px;
+        }
+
+        .check-btn {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .check-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="availability-bar">
+            <select id="adults" class="dropdown">
+                <option value="1">1 person</option>
+                <option value="2">2 person</option>
+                <option value="3">3 person</option>
+                <!-- Add more options as needed -->
+            </select>
+            <input type="text" id="checkin" placeholder="Check In" class="date-picker">
+            <input type="text" id="checkout" placeholder="Check Out" class="date-picker">
+            <button class="check-btn">CHECK AVAILABILITY</button>
+        </div>
+
+        <!-- Include jQuery and jQuery UI -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Initialize the datepickers
+                $(".date-picker").datepicker({
+                    dateFormat: "dd-mm-yy"
+                });
+            });
+        </script>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-yellow-400">Rayhan Hotel</h3>
+                        <p class="mt-4 text-gray-300">Jl Kolonel Masturi, Bandung, Indonesia</p>
+                        <p class="text-gray-300">+62 899 6070 006</p>
+                        <p class="text-gray-300">info@rayhanhotelbdg.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-yellow-400">Quick Links</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="Home.html"
+                                    class="text-gray-300 hover:text-yellow-400 transition duration-300">Home</a></li>
+                            <li><a href="Room.html"
+                                    class="text-gray-300 hover:text-yellow-400 transition duration-300">Rooms</a></li>
+                            <li><a href="Services.html"
+                                    class="text-gray-300 hover:text-yellow-400 transition duration-300">Services</a>
+                            </li>
+                      <li><a href="Admin.html"
+                      class="text-gray-300 hover:text-yellow-400 transition duration-300">Admin</a>
+                            </li>
+                            <li><a href="About.html"
+                                    class="text-gray-300 hover:text-yellow-400 transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-yellow-400">Follow Us</h3>
+                        <div class="mt-4 space-x-4">
+                            <a href="https://www.instagram.com/ryhnnrwhd?igsh=cjl5bG13aDQzZGdz" class="text-gray-300 hover:text-yellow-400 transition duration-300">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            j<a href="https://www.instagram.com/ryhnnrwhd?igsh=cjl5bG13aDQzZGdz" class="text-gray-300 hover:text-yellow-400 transition duration-300">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center text-gray-300 border-t border-gray-700 pt-4">
+                    &copy; 2024 Rayhan Hotel. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    </html>
